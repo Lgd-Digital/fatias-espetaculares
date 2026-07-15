@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fatias Espetaculares | Curso de Bolos em Fatia com Lúcio Silva - O Menino do Bolo</title>
+<meta name="description" content="Aprenda a fazer bolos em fatia que vendem sozinhos com Lúcio Silva, formado na Le Cordon Bleu e criador do @o_meninodobolo. Massas, recheios, coberturas e o passo a passo para transformar confeitaria em renda extra.">
+<meta name="keywords" content="curso de bolo em fatia, fatias espetaculares, o menino do bolo, curso de confeitaria online, renda extra vendendo bolo, Lúcio Silva">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.fatiasespetaculares.com.br/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fatias Espetaculares | Curso de Bolos em Fatia com Lúcio Silva">
+<meta property="og:description" content="O método completo para fazer e vender fatias de bolo que estão fazendo sucesso no Brasil. Aulas com Lúcio Silva, o Menino do Bolo.">
+<meta property="og:image" content="./assets/hero_cover_v2.webp">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://www.fatiasespetaculares.com.br/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fatias Espetaculares | Curso de Bolos em Fatia">
+<meta name="twitter:description" content="Aprenda a fazer e vender fatias de bolo com quem é formado na Le Cordon Bleu.">
+<meta name="twitter:image" content="./assets/hero_cover_v2.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { poppins: ['Poppins','sans-serif'] },
+        colors: {
+          cream: '#FBF6EC',
+          creamalt: '#F4EBDA',
+          cacao: { 950:'#2E1D14', 900:'#3E2A1E', 700:'#5B3A28', 500:'#8B5E3C', 300:'#C9A47C', 100:'#EBDDC8' },
+          gold: { 500:'#C9974B', 300:'#E4C68A' },
+          cta: { DEFAULT:'#8B3E22', dark:'#6E2F19' },
+          rose: '#F3D9DE',
+          lilac: '#E7DBF2',
+          sage: '#DCE8D6',
+          butter: '#F6E7BF'
+        },
+        boxShadow: {
+          soft: '0 20px 45px -20px rgba(91,58,40,0.35)',
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Poppins', sans-serif; }
+
+  /* Divisor de seção — mimica a borda de um bolo com drip de ganache */
+  .drip { display:block; width:100%; height:46px; }
+  .drip-top-cream path{ fill:#FBF6EC; }
+  .drip-top-cacao path{ fill:#3E2A1E; }
+
+  .reveal { opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.is-visible { opacity:1; transform:translateY(0); }
+
+  .marquee-track { animation: marquee 26s linear infinite; }
+  @keyframes marquee { 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
+
+  .no-scrollbar::-webkit-scrollbar{ display:none; }
+  .no-scrollbar{ -ms-overflow-style:none; scrollbar-width:none; }
+
+  .swash { position:relative; white-space:nowrap; }
+  .swash svg { position:absolute; left:0; bottom:-6px; width:100%; height:10px; }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ transition:none !important; opacity:1 !important; transform:none !important; }
+    .marquee-track{ animation:none !important; }
+  }
+
+  .cta-btn{ transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease; }
+  .cta-btn:hover{ transform: translateY(-3px) scale(1.02); box-shadow: 0 18px 30px -12px rgba(139,62,34,0.55); }
+  .cta-btn:active{ transform: translateY(0) scale(0.99); }
+  .cta-pulse{ animation: pulseSoft 2.6s ease-in-out infinite; }
+  @keyframes pulseSoft{ 0%,100%{box-shadow:0 0 0 0 rgba(139,62,34,0.35);} 50%{box-shadow:0 0 0 14px rgba(139,62,34,0);} }
+
+  .accordion-panel{ max-height:0; overflow:hidden; transition:max-height .4s ease; }
+  .accordion-icon{ transition:transform .3s ease; }
+
+  /* Calda escorrendo (drip) reutilizável em cards */
+  .drip-mini{ display:block; width:100%; pointer-events:none; }
+
+  /* Relevo de bico de confeitar (piping) — borda estilo glacê com saco de confeitar */
+  .piping-top{ position:relative; }
+  .piping-top::before{
+    content:"";
+    position:absolute;
+    top:-15px; left:0; right:0;
+    height:22px;
+    background-image:
+      radial-gradient(circle at 12px 11px, rgba(255,255,255,0.55) 0 3px, transparent 4px),
+      radial-gradient(circle at 12px 12px, var(--piping-color, #F6E7BF) 11px, transparent 12px);
+    background-size:22px 22px;
+    background-repeat:repeat-x;
+    filter:drop-shadow(0 3px 2px rgba(91,58,40,0.22));
+  }
+</style>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Fatias Espetaculares",
+  "description": "Curso online de confeitaria para aprender a fazer e vender bolos em fatia, com Lúcio Silva, o Menino do Bolo.",
+  "provider": {
+    "@type": "Organization",
+    "name": "O Menino do Bolo",
+    "sameAs": "https://www.instagram.com/o_meninodobolo/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Preciso ter experiência em confeitaria para fazer o curso?","acceptedAnswer":{"@type":"Answer","text":"Não. O método foi desenhado para quem nunca vendeu um bolo na vida e também para quem já confeita e quer profissionalizar as fatias."}},
+    {"@type":"Question","name":"Por quanto tempo tenho acesso às aulas?","acceptedAnswer":{"@type":"Answer","text":"O acesso é vitalício, você assiste no seu ritmo e pode rever quando quiser."}},
+    {"@type":"Question","name":"O curso é gravado ou ao vivo?","acceptedAnswer":{"@type":"Answer","text":"As aulas são gravadas, em vídeo, com passo a passo detalhado, para você aprender no seu tempo."}}
+  ]
+}
+</script>
+</head>
+
+<body class="bg-cream text-cacao-900 antialiased">
+
+<!-- ============ BARRA DE URGÊNCIA ============ -->
+<div class="bg-cacao-900 text-cream text-center text-xs sm:text-sm py-2 px-4 relative z-[60]">
+  <span class="font-medium">Condição de lançamento: bônus exclusivos saem do ar em</span>
+  <span id="countdown" class="font-bold tabular-nums ml-1">02:00:00</span>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header id="header" class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-cacao-100 transition-shadow">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-16 sm:h-20">
+    <a href="#topo" class="flex items-center">
+      <img src="./assets/logo-sem-fundo.png" alt="Fatias Espetaculares - por O Menino do Bolo" class="h-11 sm:h-14 w-auto">
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-cacao-700">
+      <a href="#sobre" class="hover:text-cta transition-colors">Sobre</a>
+      <a href="#conteudo" class="hover:text-cta transition-colors">Conteúdo</a>
+      <a href="#videos" class="hover:text-cta transition-colors">Bastidores</a>
+      <a href="#depoimentos" class="hover:text-cta transition-colors">Depoimentos</a>
+      <a href="#faq" class="hover:text-cta transition-colors">Dúvidas</a>
+    </nav>
+    <a href="#oferta" class="cta-btn hidden md:inline-flex items-center bg-cta hover:bg-cta-dark text-cream font-semibold text-sm px-5 py-2.5 rounded-full shadow-soft">
+      Quero minha vaga
+    </a>
+    <button id="menuBtn" aria-label="Abrir menu" aria-expanded="false" class="md:hidden text-cacao-900">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="md:hidden hidden flex-col gap-1 px-5 pb-5 bg-white border-t border-cacao-100">
+    <a href="#sobre" class="py-2.5 text-cacao-800 font-medium">Sobre</a>
+    <a href="#conteudo" class="py-2.5 text-cacao-800 font-medium">Conteúdo</a>
+    <a href="#videos" class="py-2.5 text-cacao-800 font-medium">Bastidores</a>
+    <a href="#depoimentos" class="py-2.5 text-cacao-800 font-medium">Depoimentos</a>
+    <a href="#faq" class="py-2.5 text-cacao-800 font-medium">Dúvidas</a>
+    <a href="#oferta" class="mt-2 text-center bg-cta text-cream font-semibold px-5 py-3 rounded-full">Quero minha vaga</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="topo" class="relative overflow-hidden">
+  <div class="absolute -top-24 -right-24 w-96 h-96 bg-butter rounded-full blur-3xl opacity-60"></div>
+  <div class="absolute -bottom-16 -left-16 w-72 h-72 bg-rose rounded-full blur-3xl opacity-50"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8 pt-10 sm:pt-16 pb-20 lg:pb-24 grid lg:grid-cols-2 gap-12 items-center lg:min-h-[calc(100vh-112px)]">
+    <div class="reveal">
+      <span class="inline-flex items-center gap-2 bg-butter/70 text-cacao-800 text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full">
+        <svg class="w-3.5 h-3.5 text-gold-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4a3 3 0 0 0 3 5M17 5h3a3 3 0 0 1-3 5"/></svg>
+        Tendência nº 1 da confeitaria em 2026
+      </span>
+      <h1 class="mt-5 text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold leading-[1.08] text-cacao-900">
+        O jeito mais fácil de <span class="relative swash text-cta">começar a vender<svg viewBox="0 0 200 10" preserveAspectRatio="none"><path d="M0,6 Q50,0 100,6 T200,6" stroke="#C9974B" stroke-width="4" fill="none" stroke-linecap="round"/></svg></span> bolos todos os dias
+      </h1>
+      <p class="mt-6 text-cacao-700 text-base sm:text-lg leading-relaxed max-w-xl">
+        Aprenda o método que já ajudou milhares de confeiteiros a transformar fatias irresistíveis em uma nova fonte de renda, mesmo começando do zero.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <a href="#oferta" class="cta-btn cta-pulse text-center bg-cta hover:bg-cta-dark text-cream font-semibold text-base px-8 py-4 rounded-full shadow-soft">
+          Quero aprender agora →
+        </a>
+        <a href="#conteudo" class="text-center border border-cacao-300 hover:border-cta hover:text-cta text-cacao-800 font-medium text-base px-8 py-4 rounded-full transition-colors">
+          Ver conteúdo do curso
+        </a>
+      </div>
+      <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-cacao-700">
+        <div class="flex items-center gap-2"><span class="inline-flex gap-0.5 text-gold-500"><svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.2 7-6.2-3.4L5.8 21.2 7 14.2 2 9.3l7.1-.7L12 2Z"/></svg><svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.2 7-6.2-3.4L5.8 21.2 7 14.2 2 9.3l7.1-.7L12 2Z"/></svg><svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.2 7-6.2-3.4L5.8 21.2 7 14.2 2 9.3l7.1-.7L12 2Z"/></svg><svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.2 7-6.2-3.4L5.8 21.2 7 14.2 2 9.3l7.1-.7L12 2Z"/></svg><svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.3l-5 4.9 1.2 7-6.2-3.4L5.8 21.2 7 14.2 2 9.3l7.1-.7L12 2Z"/></svg></span><span>+1,2 mi seguidores</span></div>
+        <div class="flex items-center gap-2"><svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3.2 6 3.2s6-1.7 6-3.2v-5"/></svg><span>Formado na Le Cordon Bleu</span></div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="relative max-w-xl mx-auto">
+        <img src="./assets/hero_cover_v2.webp" alt="Lúcio Silva, o Menino do Bolo, sorrindo em uma cozinha emoldurada por calda dourada escorrendo, cercado por bolos em fatia decorados e um selo dizendo 'Alunos relatam: primeiras vendas na 1ª semana'" class="relative w-full h-auto" loading="eager">
+      </div>
+    </div>
+  </div>
+
+  <svg class="drip drip-top-cream" viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 L1200,0 L1200,10 C1150,10 1150,34 1100,34 C1050,34 1050,14 1000,14 C950,14 950,30 900,30 C850,30 850,18 800,18 C750,18 750,28 700,28 C650,28 650,12 600,12 C550,12 550,32 500,32 C450,32 450,16 400,16 C350,16 350,26 300,26 C250,26 250,14 200,14 C150,14 150,30 100,30 C50,30 50,18 0,18 Z"></path>
+  </svg>
+</section>
+
+<!-- ============ FAIXA DE PROVA SOCIAL ============ -->
+<section class="bg-cacao-900 py-5 overflow-hidden">
+  <div class="no-scrollbar overflow-hidden">
+    <div class="marquee-track flex gap-14 whitespace-nowrap w-max text-cream/90 text-sm sm:text-base font-medium">
+      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3.2 6 3.2s6-1.7 6-3.2v-5"/></svg>Formado na Le Cordon Bleu São Paulo</span>
+      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M8 21h8M12 19v2"/></svg>Já apareceu no Mais Você, com Ana Maria Braga</span>
+      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>+1,2 milhão de seguidores no Instagram</span>
+      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 12 4l9 16Z"/><path d="M3 20h18"/><path d="M9 20l3-8 3 8"/><circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/></svg>Criador do perfil @o_meninodobolo</span>
+      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3.2 6 3.2s6-1.7 6-3.2v-5"/></svg>Formado na Le Cordon Bleu São Paulo</span>
+      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M8 21h8M12 19v2"/></svg>Já apareceu no Mais Você, com Ana Maria Braga</span>
+      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>+1,2 milhão de seguidores no Instagram</span>
+      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 12 4l9 16Z"/><path d="M3 20h18"/><path d="M9 20l3-8 3 8"/><circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/></svg>Criador do perfil @o_meninodobolo</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HISTÓRIA / GANCHO ============ -->
+<section class="bg-cream py-20 sm:py-28 overflow-hidden relative">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
+
+    <div class="reveal text-center lg:text-left">
+      <span class="text-xs font-bold uppercase tracking-widest text-gold-500">A oportunidade que mudou a confeitaria</span>
+
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold leading-tight text-cacao-900">
+        Um único bolo pode render <span class="text-cta">dezenas de vendas.</span>
+      </h2>
+
+      <p class="mt-6 text-cacao-700 leading-relaxed">
+        Depois de participar de diversos festivais de confeitaria, percebi um padrão: enquanto muitos esperavam vender um bolo inteiro, as filas se formavam para comprar fatias.
+      </p>
+      <p class="mt-4 font-bold text-cacao-900">
+        Foi ali que nasceu o Método Fatias Espetaculares.
+      </p>
+      <p class="mt-4 text-cacao-700 leading-relaxed">
+        Porque vender uma fatia significa vender mais vezes, alcançar mais clientes e criar uma nova fonte de renda com o mesmo bolo.
+      </p>
+
+      <a href="#oferta" class="cta-btn cta-pulse mt-8 inline-flex items-center gap-2 bg-cta hover:bg-cta-dark text-cream font-semibold text-base px-8 py-4 rounded-full shadow-soft">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 12 4l9 16Z"/><path d="M3 20h18"/><path d="M9 20l3-8 3 8"/><circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/></svg>
+        Quero aprender esse método
+      </a>
+    </div>
+
+    <div class="reveal relative">
+      <div class="absolute -top-10 -right-6 w-40 h-40 bg-gold-300/30 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-10 -left-6 w-40 h-40 bg-rose/40 rounded-full blur-3xl"></div>
+
+      <div class="relative bg-white rounded-[2rem] shadow-soft border border-cacao-100 p-8 sm:p-10">
+        <!-- Passo 1: 1 bolo -->
+        <div class="flex items-center gap-4">
+          <div class="shrink-0 w-14 h-14 rounded-2xl bg-rose/50 flex items-center justify-center text-cta">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16"/><path d="M5 21V13a7 7 0 0 1 14 0v8"/><path d="M12 2v3M8 4l1 2M16 4l-1 2"/></svg>
+          </div>
+          <div>
+            <p class="text-2xl font-extrabold text-cacao-900">1 bolo</p>
+            <p class="text-sm text-cacao-600">Uma única produção</p>
+          </div>
+        </div>
+
+        <div class="ml-7 my-2 flex flex-col items-start">
+          <span class="w-px h-8 bg-gold-300"></span>
+          <svg class="w-4 h-4 text-gold-500 -mt-1" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4v14M12 18l-5-5M12 18l5-5"/></svg>
+        </div>
+
+        <!-- Passo 2: 12 fatias -->
+        <div class="flex items-center gap-4">
+          <div class="shrink-0 w-14 h-14 rounded-2xl bg-butter/70 flex items-center justify-center text-cacao-800">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 12 4l9 16Z"/><path d="M3 20h18"/><path d="M9 20l3-8 3 8"/><circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <div>
+            <p class="text-2xl font-extrabold text-cacao-900">12 fatias</p>
+            <p class="text-sm text-cacao-600">Cortadas do mesmo bolo</p>
+          </div>
+        </div>
+
+        <div class="ml-7 my-2 flex flex-col items-start">
+          <span class="w-px h-8 bg-gold-300"></span>
+          <svg class="w-4 h-4 text-gold-500 -mt-1" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4v14M12 18l-5-5M12 18l5-5"/></svg>
+        </div>
+
+        <!-- Passo 3: 12 oportunidades de venda -->
+        <div class="flex items-center gap-4">
+          <div class="shrink-0 w-14 h-14 rounded-2xl bg-sage/60 flex items-center justify-center text-cacao-800">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1.4 1.3-2.5 3-2.5s3 1.1 3 2.5-1.3 2-3 2.5-3 1.1-3 2.5 1.3 2.5 3 2.5 3-1.1 3-2.5"/></svg>
+          </div>
+          <div>
+            <p class="text-2xl font-extrabold text-cta">12 oportunidades</p>
+            <p class="text-sm text-cacao-600">De venda — com o mesmo bolo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section id="sobre" class="bg-cream py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <img src="./assets/about_photo_frame.webp" alt="Lúcio Silva, o Menino do Bolo, criador do método Fatias Espetaculares, emoldurado por chantilly e calda de chocolate escorrendo, com morangos e saco de confeitar ao lado" class="w-full h-auto" loading="lazy">
+    </div>
+
+    <div class="reveal">
+      <span class="text-xs font-bold uppercase tracking-widest text-gold-500">Quem ensina</span>
+      <h2 class="mt-3 text-4xl sm:text-5xl font-extrabold text-cacao-900 leading-tight">Lúcio Silva,</h2>
+      <p class="italic text-3xl sm:text-4xl font-semibold text-cta relative inline-block pb-2">
+        o Menino do Bolo
+        <svg class="absolute left-0 -bottom-0.5 w-full h-1.5" viewBox="0 0 300 6" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,3 L300,3" stroke="#C9974B" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+      </p>
+
+      <p class="mt-6 text-cacao-700 leading-relaxed">
+        Enquanto muita gente ainda tenta viver da confeitaria vendendo bolos inteiros, Lúcio encontrou um caminho muito mais lucrativo: <strong class="text-cacao-900">transformar bolos em fatias irresistíveis que vendem todos os dias.</strong>
+      </p>
+      <p class="mt-4 text-cacao-700 leading-relaxed">
+        Depois de ensinar <strong class="text-cacao-900">mais de um milhão de pessoas</strong> nas redes sociais e se aperfeiçoar na <strong class="text-cacao-900">Le Cordon Bleu São Paulo</strong>, ele reuniu tudo o que aprendeu em anos de prática em um <strong class="text-cacao-900">treinamento completo, prático e direto ao ponto.</strong>
+      </p>
+
+      <div class="mt-8">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-cacao-500 text-center lg:text-left">Destaque na mídia</p>
+        <div class="mt-4 flex flex-wrap items-center gap-x-7 gap-y-3 justify-center lg:justify-start text-cacao-700">
+          <span class="flex items-center gap-2 text-sm font-semibold">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/></svg>
+            Le Cordon Bleu
+          </span>
+          <span class="flex items-center gap-2 text-sm font-semibold">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8h18M8 5v3"/></svg>
+            Mais Você
+          </span>
+          <span class="flex items-center gap-2 text-sm font-semibold">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+            Instagram
+          </span>
+          <span class="flex items-center gap-2 text-sm font-semibold">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2c.3 2.3 1.7 3.8 4 4v3c-1.5 0-2.8-.4-4-1.2v6.4a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.5V2h3Z"/></svg>
+            TikTok
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POR QUE FATIAS ============ -->
+<section class="bg-creamalt py-20 sm:py-28 overflow-hidden">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="inline-flex bg-rose/60 text-cta text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full">A oportunidade</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-cacao-900">Por que vender fatias de bolo é o negócio do momento?</h2>
+      <p class="mt-4 text-cacao-700 leading-relaxed">Enquanto um bolo inteiro exige encomenda, a fatia vende todos os dias — na padaria, no escritório, no delivery e no Instagram. É a porta de entrada perfeita para a confeitaria lucrativa.</p>
+    </div>
+
+    <div class="mt-14 reveal relative grid md:grid-cols-2 gap-6 md:gap-0 items-stretch">
+      <!-- VS badge central -->
+      <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-16 h-16 rounded-full bg-cta text-cream font-extrabold text-sm items-center justify-center shadow-soft border-4 border-creamalt">
+        VS
+      </div>
+
+      <!-- BOLO INTEIRO (jeito antigo) -->
+      <div class="bg-white/60 border border-cacao-200 rounded-[1.75rem] md:rounded-r-none p-8 sm:p-10">
+        <p class="text-xs font-bold uppercase tracking-widest text-cacao-500">O jeito de sempre</p>
+        <h3 class="mt-1 text-xl font-extrabold text-cacao-700">Vender bolo inteiro</h3>
+        <ul class="mt-6 space-y-4 text-sm text-cacao-600">
+          <li class="flex items-start gap-3">
+            <span class="shrink-0 w-6 h-6 rounded-full bg-cacao-100 text-cacao-500 flex items-center justify-center mt-0.5">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </span>
+            Poucas pessoas compram um bolo inteiro sem uma ocasião especial
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="shrink-0 w-6 h-6 rounded-full bg-cacao-100 text-cacao-500 flex items-center justify-center mt-0.5">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </span>
+            Você depende de aniversários e datas comemorativas
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="shrink-0 w-6 h-6 rounded-full bg-cacao-100 text-cacao-500 flex items-center justify-center mt-0.5">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </span>
+            Um bolo vendido significa apenas uma venda
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="shrink-0 w-6 h-6 rounded-full bg-cacao-100 text-cacao-500 flex items-center justify-center mt-0.5">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </span>
+            Precisa esperar grandes encomendas para faturar
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="shrink-0 w-6 h-6 rounded-full bg-cacao-100 text-cacao-500 flex items-center justify-center mt-0.5">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </span>
+            Pouca variedade disponível por produção
+          </li>
+        </ul>
+      </div>
+
+      <!-- FATIAS (jeito novo) -->
+      <div class="relative bg-cacao-900 text-cream rounded-[1.75rem] md:rounded-l-none p-8 sm:p-10 shadow-soft">
+        <p class="text-xs font-bold uppercase tracking-widest text-gold-300">O Método Fatias Espetaculares</p>
+        <h3 class="mt-1 text-xl font-extrabold text-cream">Venda por fatia</h3>
+        <ul class="mt-6 space-y-4 text-sm text-cream/85">
+          <li class="flex items-start gap-3">
+            <span class="shrink-0 w-6 h-6 rounded-full bg-gold-500 text-cacao-900 flex items-center justify-center mt-0.5">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            Transforme um único bolo em dezenas de oportunidades de venda
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="shrink-0 w-6 h-6 rounded-full bg-gold-500 text-cacao-900 flex items-center justify-center mt-0.5">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            Venda um produto que o cliente compra por impulso
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="shrink-0 w-6 h-6 rounded-full bg-gold-500 text-cacao-900 flex items-center justify-center mt-0.5">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            Comece usando o que você já tem na cozinha
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="shrink-0 w-6 h-6 rounded-full bg-gold-500 text-cacao-900 flex items-center justify-center mt-0.5">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            Produza no seu tempo e venda por encomenda, delivery ou vitrine
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="shrink-0 w-6 h-6 rounded-full bg-gold-500 text-cacao-900 flex items-center justify-center mt-0.5">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            Aumente seu faturamento sem depender de grandes encomendas
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTEÚDO ============ -->
+<section id="conteudo" class="bg-cream py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="text-xs font-semibold uppercase tracking-widest text-gold-500">Conteúdo do curso</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-cacao-900">O que você vai aprender</h2>
+      <p class="mt-4 text-cacao-700 leading-relaxed">Um passo a passo direto ao ponto: da massa à venda, sem pular etapas.</p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="reveal rounded-2xl p-7 bg-rose/40 border border-rose">
+        <svg class="w-8 h-8 text-cacao-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V20H6Z"/><path d="M6 17h12"/></svg>
+        <h3 class="mt-4 font-bold text-cacao-900">Massas práticas</h3>
+        <p class="mt-2 text-sm text-cacao-700">Estrutura e umidade ideais para corte de fatias, nos tamanhos 22cm, 25cm e forma retangular.</p>
+      </div>
+      <div class="reveal rounded-2xl p-7 bg-lilac/40 border border-lilac">
+        <svg class="w-8 h-8 text-cacao-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8M9 3v3.5L7 9v10a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9l-2-2.5V3"/><path d="M7 13h10"/></svg>
+        <h3 class="mt-4 font-bold text-cacao-900">+15 sabores de recheio</h3>
+        <p class="mt-2 text-sm text-cacao-700">Escolha de ingredientes e ponto de cozimento certo para camadas cremosas, estáveis e estruturadas.</p>
+      </div>
+      <div class="reveal rounded-2xl p-7 bg-sage/40 border border-sage">
+        <svg class="w-8 h-8 text-cacao-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 12 4l9 16Z"/><path d="M3 20h18"/><path d="M9 20l3-8 3 8"/><circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/></svg>
+        <h3 class="mt-4 font-bold text-cacao-900">Montagem com técnica</h3>
+        <p class="mt-2 text-sm text-cacao-700">Distribuição correta de massa, calda e recheio para garantir estrutura e corte bonito das fatias.</p>
+      </div>
+      <div class="reveal rounded-2xl p-7 bg-butter/50 border border-butter">
+        <svg class="w-8 h-8 text-cacao-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21 16 8"/><path d="M16 8a4 4 0 0 0 5-5L11 13"/></svg>
+        <h3 class="mt-4 font-bold text-cacao-900">Corte e embalagem</h3>
+        <p class="mt-2 text-sm text-cacao-700">Corte padronizado e prático, além de como embalar garantindo conservação e boa apresentação.</p>
+      </div>
+      <div class="reveal rounded-2xl p-7 bg-rose/40 border border-rose">
+        <svg class="w-8 h-8 text-cacao-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20c1 0 2-.5 2-2 0-.7-.3-1.2-.7-1.6-.4-.4-.6-.9-.6-1.4 0-1 .8-1.8 1.8-1.8H16a4 4 0 0 0 4-4c0-5-4-9-8-9Z"/><circle cx="7.5" cy="10.5" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="7" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="10.5" r="1" fill="currentColor" stroke="none"/></svg>
+        <h3 class="mt-4 font-bold text-cacao-900">Finalização e decoração</h3>
+        <p class="mt-2 text-sm text-cacao-700">Técnicas de espatulagem e trabalho de bico que valorizam ainda mais o visual dos seus bolos.</p>
+      </div>
+      <div class="reveal rounded-2xl p-7 bg-lilac/40 border border-lilac">
+        <svg class="w-8 h-8 text-cacao-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.59 2.59 20 10a2 2 0 0 1 0 2.83l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V4a2 2 0 0 1 2-2h8.59Z"/><circle cx="7.5" cy="7.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        <h3 class="mt-4 font-bold text-cacao-900">Precificação e lucro</h3>
+        <p class="mt-2 text-sm text-cacao-700">Como calcular o preço da fatia sem trabalhar de graça e ainda ter margem real.</p>
+      </div>
+    </div>
+
+    <div class="mt-20">
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <span class="text-xs font-semibold uppercase tracking-widest text-gold-500">Cardápio completo</span>
+        <h3 class="mt-3 text-2xl sm:text-3xl font-extrabold text-cacao-900">Tudo o que você vai ter em mãos</h3>
+        <p class="mt-3 text-cacao-700 leading-relaxed">O passo a passo de cada receita, já testada e pronta pra vender — sem precisar inventar nada sozinho.</p>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 gap-6">
+        <!-- MASSAS -->
+        <div class="reveal relative bg-white rounded-2xl border border-cacao-100 shadow-sm overflow-hidden">
+          <svg viewBox="0 0 400 34" preserveAspectRatio="none" class="drip-mini absolute top-0 left-0 opacity-90 pointer-events-none" style="height:14px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#F3D9DE" d="M0,0 L400,0 L400,6 C390,6 388,26 378,26 C368,26 366,10 356,10 C346,10 344,30 334,30 C324,30 322,14 312,14 C302,14 300,22 290,22 C280,22 278,8 268,8 C258,8 256,28 246,28 C236,28 234,12 224,12 C214,12 212,24 202,24 C192,24 190,6 180,6 C170,6 168,20 158,20 C148,20 146,10 136,10 C126,10 124,26 114,26 C104,26 102,14 92,14 C82,14 80,22 70,22 C60,22 58,8 48,8 C38,8 36,18 26,18 C16,18 14,6 4,6 C2,6 0,6 0,6 Z"></path></svg>
+          <div class="p-7 pt-9">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-rose/60 flex items-center justify-center text-cacao-800"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V20H6Z"/><path d="M6 17h12"/></svg></span>
+              <h4 class="font-extrabold text-cacao-900 text-lg">Massas</h4>
+            </div>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="bg-rose/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Baunilha</span>
+              <span class="bg-rose/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Chocolate</span>
+              <span class="bg-rose/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Chocolate Black</span>
+              <span class="bg-rose/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Red Velvet</span>
+            </div>
+            <p class="mt-4 text-sm text-cacao-700">Cada receita em versão para aro 22cm, 25cm e forma retangular.</p>
+            <ul class="mt-4 space-y-1.5 text-sm text-cacao-700">
+              <li class="flex gap-2"><span class="text-cta">✓</span>Guia de conservação</li>
+              <li class="flex gap-2"><span class="text-cta">✓</span>Guia de descongelamento</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- RECHEIOS -->
+        <div class="reveal relative bg-white rounded-2xl border border-cacao-100 shadow-sm overflow-hidden">
+          <svg viewBox="0 0 400 34" preserveAspectRatio="none" class="drip-mini absolute top-0 left-0 opacity-90 pointer-events-none" style="height:14px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#E4C68A" d="M0,0 L400,0 L400,6 C390,6 388,26 378,26 C368,26 366,10 356,10 C346,10 344,30 334,30 C324,30 322,14 312,14 C302,14 300,22 290,22 C280,22 278,8 268,8 C258,8 256,28 246,28 C236,28 234,12 224,12 C214,12 212,24 202,24 C192,24 190,6 180,6 C170,6 168,20 158,20 C148,20 146,10 136,10 C126,10 124,26 114,26 C104,26 102,14 92,14 C82,14 80,22 70,22 C60,22 58,8 48,8 C38,8 36,18 26,18 C16,18 14,6 4,6 C2,6 0,6 0,6 Z"></path></svg>
+          <div class="p-7 pt-9">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-butter/70 flex items-center justify-center text-cacao-800"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8M9 3v3.5L7 9v10a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9l-2-2.5V3"/><path d="M7 13h10"/></svg></span>
+              <h4 class="font-extrabold text-cacao-900 text-lg">Recheios</h4>
+            </div>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Brigadeiro branco</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Brigadeiro de chocolate</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Brigadeiro de Nutella</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Brigadeiro de coco</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Brigadeiro de maracujá</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Brigadeiro de leite ninho</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Brigadeiro de doce de leite</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Brigadeiro de cream cheese</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Brigadeiro de pistache</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Brigadeiro de Biscoff</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Brigadeiro sensação</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Mousse de ninho</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Mousse de Oreo</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Mousse de chocolate</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Geleia de morango</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Geleia de abacaxi</span>
+              <span class="bg-butter/50 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Geleia de ameixa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SABORES DAS FATIAS -->
+        <div class="reveal relative bg-white rounded-2xl border border-cacao-100 shadow-sm overflow-hidden">
+          <svg viewBox="0 0 400 34" preserveAspectRatio="none" class="drip-mini absolute top-0 left-0 opacity-90 pointer-events-none" style="height:14px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#DCE8D6" d="M0,0 L400,0 L400,6 C390,6 388,26 378,26 C368,26 366,10 356,10 C346,10 344,30 334,30 C324,30 322,14 312,14 C302,14 300,22 290,22 C280,22 278,8 268,8 C258,8 256,28 246,28 C236,28 234,12 224,12 C214,12 212,24 202,24 C192,24 190,6 180,6 C170,6 168,20 158,20 C148,20 146,10 136,10 C126,10 124,26 114,26 C104,26 102,14 92,14 C82,14 80,22 70,22 C60,22 58,8 48,8 C38,8 36,18 26,18 C16,18 14,6 4,6 C2,6 0,6 0,6 Z"></path></svg>
+          <div class="p-7 pt-9">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-sage/60 flex items-center justify-center text-cacao-800"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 12 4l9 16Z"/><path d="M3 20h18"/><path d="M9 20l3-8 3 8"/><circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/></svg></span>
+              <h4 class="font-extrabold text-cacao-900 text-lg">Sabores das fatias</h4>
+            </div>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Folhada de morango</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Choco Oreo</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Sensação</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Chocolatudo</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Torta de limão</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Olho de sogra</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Pistache</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Ninho e Nutella</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Red Velvet</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Ferrero</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Maracujá</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Prestígio</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Bolo Pudim de leite</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Bolo Pudim de Chocolate</span>
+              <span class="bg-sage/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Biscoff</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- E MAIS -->
+        <div class="reveal relative bg-white rounded-2xl border border-cacao-100 shadow-sm overflow-hidden">
+          <svg viewBox="0 0 400 34" preserveAspectRatio="none" class="drip-mini absolute top-0 left-0 opacity-90 pointer-events-none" style="height:14px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#C9974B" d="M0,0 L400,0 L400,6 C390,6 388,26 378,26 C368,26 366,10 356,10 C346,10 344,30 334,30 C324,30 322,14 312,14 C302,14 300,22 290,22 C280,22 278,8 268,8 C258,8 256,28 246,28 C236,28 234,12 224,12 C214,12 212,24 202,24 C192,24 190,6 180,6 C170,6 168,20 158,20 C148,20 146,10 136,10 C126,10 124,26 114,26 C104,26 102,14 92,14 C82,14 80,22 70,22 C60,22 58,8 48,8 C38,8 36,18 26,18 C16,18 14,6 4,6 C2,6 0,6 0,6 Z"></path></svg>
+          <div class="p-7 pt-9">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-lilac/60 flex items-center justify-center text-cacao-800"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5s5.5 6.3 5.5 10.3a5.5 5.5 0 1 1-11 0c0-4 5.5-10.3 5.5-10.3Z"/></svg></span>
+              <h4 class="font-extrabold text-cacao-900 text-lg">E mais...</h4>
+            </div>
+            <p class="mt-4 text-xs font-bold uppercase tracking-widest text-cacao-500">Caldas para umedecer as massas</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="bg-lilac/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Calda base de açúcar</span>
+              <span class="bg-lilac/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Calda base leite condensado</span>
+              <span class="bg-lilac/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Calda base chocolate</span>
+              <span class="bg-lilac/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Calda base chocolate black</span>
+            </div>
+            <p class="mt-4 text-xs font-bold uppercase tracking-widest text-cacao-500">Caldinhas complementares</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="bg-lilac/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Ninho</span>
+              <span class="bg-lilac/40 text-cacao-800 text-xs font-medium px-3 py-1.5 rounded-full">Chocolate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIA ============ -->
+<section class="bg-creamalt py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="inline-block bg-butter/70 text-cacao-800 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">Galeria de resultados</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-cacao-900">Veja o que você vai <span class="text-gold-500">conseguir criar</span></h2>
+      <p class="mt-4 text-cacao-700 leading-relaxed">Produções que encantam, conquistam clientes e geram venda. Tudo o que você vai aprender no curso Fatias Espetaculares.</p>
+    </div>
+
+    <div class="mt-12 reveal grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <img src="./assets/real/real_1.jpg" alt="Fatias de bolo de chocolate com morango e uva verde, embaladas para entrega" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
+      <img src="./assets/real/real_7.jpg" alt="Fatias de bolo rosa com morango e geleia, embaladas para entrega" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
+      <img src="./assets/real/real_3.jpg" alt="Variedade de bolos inteiros decorados: red velvet, coco, pistache e chocolate" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
+      <img src="./assets/real/real_2.jpg" alt="Bolo de limão com camadas fofinhas, cortado ao meio" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
+      <img src="./assets/real/real_4.jpg" alt="Fatia de bolo de chocolate com doce de leite, embalada para viagem" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
+      <img src="./assets/real/real_5.jpg" alt="Fatia de bolo de chocolate com maracujá e brigadeiro, embalada para viagem" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
+      <img src="./assets/real/real_6.jpg" alt="Fatia de bolo branco com uva verde, embalada para viagem" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARROSSEL DE VÍDEOS ============ -->
+<section id="videos" class="bg-cacao-900 py-20 sm:py-28 relative overflow-hidden">
+  <svg class="drip drip-top-cacao rotate-180 absolute -top-px left-0" viewBox="0 0 1200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 L1200,0 L1200,10 C1150,10 1150,34 1100,34 C1050,34 1050,14 1000,14 C950,14 950,30 900,30 C850,30 850,18 800,18 C750,18 750,28 700,28 C650,28 650,12 600,12 C550,12 550,32 500,32 C450,32 450,16 400,16 C350,16 350,26 300,26 C250,26 250,14 200,14 C150,14 150,30 100,30 C50,30 50,18 0,18 Z"></path>
+  </svg>
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 pt-6">
+    <div class="flex items-end justify-between flex-wrap gap-4 reveal">
+      <div class="max-w-xl">
+        <span class="text-xs font-semibold uppercase tracking-widest text-gold-300">Bastidores</span>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-cream">Direto da cozinha (e da TV)</h2>
+        <p class="mt-3 text-cream/70">Arraste para o lado e conheça um pouco da trajetória do Lúcio.</p>
+      </div>
+      <div class="hidden sm:flex gap-3">
+        <button id="carPrev" aria-label="Vídeo anterior" class="w-11 h-11 rounded-full border border-cream/30 text-cream flex items-center justify-center hover:bg-cream/10 transition-colors">‹</button>
+        <button id="carNext" aria-label="Próximo vídeo" class="w-11 h-11 rounded-full border border-cream/30 text-cream flex items-center justify-center hover:bg-cream/10 transition-colors">›</button>
+      </div>
+    </div>
+
+    <div id="carousel" class="mt-10 flex gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory cursor-grab active:cursor-grabbing pb-4">
+      <div class="snap-start shrink-0 w-[220px] sm:w-[260px] reveal">
+        <div class="relative rounded-2xl overflow-hidden aspect-[9/16] group cursor-pointer video-card">
+          <video autoplay loop muted playsinline class="absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform" preload="metadata">
+            <source src="./assets/reels/o_meninodobolo.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center text-cta text-xl group-hover:scale-110 transition-transform">▶</div>
+          </div>
+          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">O dia em que fui parar no Mais Você, com a Ana Maria Braga</p>
+        </div>
+      </div>
+      <div class="snap-start shrink-0 w-[220px] sm:w-[260px] reveal">
+        <div class="relative rounded-2xl overflow-hidden aspect-[9/16] group cursor-pointer video-card">
+          <video autoplay loop muted playsinline class="absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform" preload="metadata">
+            <source src="./assets/reels/o_meninodobolo1.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center text-cta text-xl group-hover:scale-110 transition-transform">▶</div>
+          </div>
+          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">Bastidores da formação na Le Cordon Bleu São Paulo</p>
+        </div>
+      </div>
+      <div class="snap-start shrink-0 w-[220px] sm:w-[260px] reveal">
+        <div class="relative rounded-2xl overflow-hidden aspect-[9/16] group cursor-pointer video-card">
+          <video autoplay loop muted playsinline class="absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform" preload="metadata">
+            <source src="./assets/reels/o_meninodobolo2.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center text-cta text-xl group-hover:scale-110 transition-transform">▶</div>
+          </div>
+          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">Como nasceu o método Fatias Espetaculares</p>
+        </div>
+      </div>
+      <div class="snap-start shrink-0 w-[220px] sm:w-[260px] reveal">
+        <div class="relative rounded-2xl overflow-hidden aspect-[9/16] group cursor-pointer video-card">
+          <video autoplay loop muted playsinline class="absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform" preload="metadata">
+            <source src="./assets/reels/o_meninodobolo4.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center text-cta text-xl group-hover:scale-110 transition-transform">▶</div>
+          </div>
+          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">De 0 a 1,2 milhão de seguidores fazendo bolo</p>
+        </div>
+      </div>
+      <div class="snap-start shrink-0 w-[220px] sm:w-[260px] reveal">
+        <div class="relative rounded-2xl overflow-hidden aspect-[9/16] group cursor-pointer video-card">
+          <video autoplay loop muted playsinline class="absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform" preload="metadata">
+            <source src="./assets/reels/o_meninodobolo5.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center text-cta text-xl group-hover:scale-110 transition-transform">▶</div>
+          </div>
+          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">Montagem completa de uma fatia, do zero</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUEM É ============ -->
+<section class="bg-creamalt py-20 sm:py-28 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="text-xs font-semibold uppercase tracking-widest text-gold-500">Esse curso é pra você?</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-cacao-900">Para quem é esse curso</h2>
+      <p class="mt-4 text-cacao-700 leading-relaxed">Não importa se você nunca vendeu um bolo ou se já vive de confeitaria — o método se encaixa no seu ponto de partida.</p>
+    </div>
+
+    <div class="mt-14 grid lg:grid-cols-[0.9fr_1.1fr] gap-6 items-center">
+      <div class="reveal order-2 lg:order-1 max-w-md mx-auto lg:mx-0 lg:ml-auto">
+        <img src="./assets/quem_e_produto.webp" alt="Fatias de bolo prontas, embaladas individualmente em caixa para entrega, com morangos e chocolate ao lado" class="w-full h-auto" loading="lazy" width="640" height="992">
+      </div>
+
+      <div class="reveal order-1 lg:order-2">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="bg-white rounded-2xl p-5 border border-cacao-100 shadow-sm">
+            <div class="flex items-start justify-between">
+              <div class="w-12 h-12 rounded-full border-2 border-cta/70 flex items-center justify-center text-cta">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V20H6Z"/><path d="M6 17h12"/></svg>
+              </div>
+              <img src="./assets/cake_4.jpg" alt="Fatia de bolo de chocolate" class="w-16 h-16 object-cover rounded-xl rotate-3 shadow-sm">
+            </div>
+            <h4 class="mt-4 font-extrabold text-cacao-900 leading-snug">Estou começando<br><span class="text-gold-500">na confeitaria</span></h4>
+            <p class="mt-2 text-sm text-cacao-700 leading-relaxed">Aprenda um produto simples, lucrativo e fácil de produzir para vender.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-cacao-100 shadow-sm">
+            <div class="flex items-start justify-between">
+              <div class="w-12 h-12 rounded-full border-2 border-cta/70 flex items-center justify-center text-cta">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6.5v11M15.2 9.3c0-1.3-1.4-2.3-3.2-2.3s-3.2 1-3.2 2.2c0 1.2 1.2 1.7 3.2 2.1 2 .4 3.2 1 3.2 2.2 0 1.2-1.4 2.3-3.2 2.3s-3.2-1-3.2-2.3"/></svg>
+              </div>
+              <img src="./assets/cake_9.jpg" alt="Bolo de morango decorado com chantilly" class="w-16 h-16 object-cover rounded-xl -rotate-3 shadow-sm">
+            </div>
+            <h4 class="mt-4 font-extrabold text-cacao-900 leading-snug">Quero uma<br><span class="text-gold-500">renda extra</span></h4>
+            <p class="mt-2 text-sm text-cacao-700 leading-relaxed">Venda fatias todos os dias e conquiste mais liberdade financeira.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-cacao-100 shadow-sm">
+            <div class="flex items-start justify-between">
+              <div class="w-12 h-12 rounded-full border-2 border-cta/70 flex items-center justify-center text-cta">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 12 4l9 5-9 5-9-5Z"/><path d="M3 9v7l9 5 9-5V9"/><path d="M12 14v6"/></svg>
+              </div>
+              <img src="./assets/cake_1.jpg" alt="Bolo com cobertura branca e uvas verdes" class="w-16 h-16 object-cover rounded-xl rotate-3 shadow-sm">
+            </div>
+            <h4 class="mt-4 font-extrabold text-cacao-900 leading-snug">Já faço bolos e<br><span class="text-gold-500">quero inovar</span></h4>
+            <p class="mt-2 text-sm text-cacao-700 leading-relaxed">Amplie seu cardápio com fatias modernas que encantam e vendem mais.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-cacao-100 shadow-sm">
+            <div class="flex items-start justify-between">
+              <div class="w-12 h-12 rounded-full border-2 border-cta/70 flex items-center justify-center text-cta">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8l9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
+              </div>
+              <img src="./assets/cake_7.jpg" alt="Red velvet decorado com morangos" class="w-16 h-16 object-cover rounded-xl -rotate-3 shadow-sm">
+            </div>
+            <h4 class="mt-4 font-extrabold text-cacao-900 leading-snug">Quero montar bolos<br><span class="text-gold-500">estruturados</span></h4>
+            <p class="mt-2 text-sm text-cacao-700 leading-relaxed">Aprenda técnicas para criar camadas perfeitas e dominar acabamentos profissionais.</p>
+          </div>
+        </div>
+
+
+        <div class="mt-4 flex flex-col sm:flex-row items-center gap-4 bg-white rounded-2xl p-5 border border-cacao-100 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-rose/50 flex items-center justify-center text-cta shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9C.5 8.5 2 4 6 4c2 0 3.5 1 4 2 .5-1 2-2 4-2 4 0 5.5 4.5 3.5 8-2.5 4.5-9.5 9-9.5 9Z"/></svg>
+          </div>
+          <p class="flex-1 text-sm text-cacao-700 text-center sm:text-left">Não precisa ser perfeito pra começar — só precisa começar.</p>
+          <a href="#oferta" class="cta-btn w-full sm:w-auto text-center bg-cta hover:bg-cta-dark text-cream font-semibold text-sm px-6 py-3 rounded-full shrink-0">Quero começar agora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACESSO VITALÍCIO & CERTIFICADO ============ -->
+<section class="bg-white py-20 sm:py-28 relative overflow-hidden">
+  <!-- Elementos de design abstratos para luxo/premium -->
+  <div class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-gold-300/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute right-0 bottom-0 w-80 h-80 bg-rose/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
+    <div class="text-center max-w-3xl mx-auto reveal mb-16">
+      <span class="text-xs font-semibold uppercase tracking-widest text-gold-500">Desenvolva no seu ritmo</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-cacao-900">E não acabou... Seu aprendizado tem garantia e reconhecimento</h2>
+      <p class="mt-4 text-cacao-700 leading-relaxed">
+        Preparamos uma estrutura completa para que você estude sem pressa e valide seu conhecimento de forma profissional.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+      
+      <!-- CARD ACESSO VITALÍCIO -->
+      <div class="bg-creamalt/45 border border-cacao-100 rounded-3xl p-8 sm:p-10 flex flex-col justify-between reveal transition-all duration-300 hover:shadow-soft">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/10 border border-gold-300/30 flex items-center justify-center text-gold-500 mb-6">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-gold-500">Estude no seu tempo</span>
+          <h3 class="mt-2 text-2xl sm:text-3xl font-extrabold text-cacao-900">Acesso Vitalício ao Método</h3>
+          <p class="mt-4 text-cacao-700 leading-relaxed text-sm sm:text-base">
+            Esqueça prazos e mensalidades. O curso é seu para sempre. Você pode assistir às aulas no seu próprio ritmo e rever as receitas sempre que precisar.
+          </p>
+
+          <ul class="mt-8 space-y-3.5 text-sm text-cacao-800">
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-gold-500/10 text-gold-500 flex items-center justify-center shrink-0">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              Sem limite de tempo ou expiração
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-gold-500/10 text-gold-500 flex items-center justify-center shrink-0">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              Acesso a futuras atualizações inclusas
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-gold-500/10 text-gold-500 flex items-center justify-center shrink-0">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              Compatível com celular, tablet e TV
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-cacao-100/60 flex items-center gap-3">
+          <div class="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-500 shrink-0">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/></svg>
+          </div>
+          <p class="text-xs font-semibold text-cacao-700">
+            Aprenda, revise e aprimore no seu próprio ritmo.
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD CERTIFICADO -->
+      <div class="bg-creamalt/45 border border-cacao-100 rounded-3xl p-8 sm:p-10 flex flex-col justify-between reveal transition-all duration-300 hover:shadow-soft">
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-cta/10 border border-cta/10 flex items-center justify-center text-cta mb-6">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-cta">Valorização Profissional</span>
+          <h3 class="mt-2 text-2xl sm:text-3xl font-extrabold text-cacao-900">Certificado de Conclusão</h3>
+          <p class="mt-4 text-cacao-700 leading-relaxed text-sm sm:text-base">
+            Ao finalizar todas as aulas práticas, você terá direito ao seu Certificado de Conclusão exclusivo assinado pelo Lúcio Silva. Mostre para seus clientes e agregue autoridade e valor ao seu produto final.
+          </p>
+        </div>
+        
+        <div id="openCertModal" class="mt-8 relative overflow-hidden rounded-2xl border border-cacao-200/50 shadow-md group cursor-zoom-in">
+          <img src="./assets/certificado_conclusao.png" alt="Certificado de conclusão de Fatias Espetaculares" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="bg-white/95 text-cacao-900 text-xs font-bold px-4.5 py-2.5 rounded-full shadow-lg flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              Ampliar Certificado
+            </span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Modal do Certificado -->
+<div id="certModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 opacity-0 transition-opacity duration-300 ease-out p-4">
+  <div class="relative max-w-4xl w-full mx-auto">
+    <button id="closeCertModal" class="absolute -top-12 right-0 text-white hover:text-gold-300 text-3xl font-bold transition-colors" aria-label="Fechar modal">&times;</button>
+    <img src="./assets/certificado_conclusao.png" alt="Certificado Fatias Espetaculares" class="w-full h-auto rounded-xl shadow-2xl border-4 border-white/10">
+  </div>
+</div>
+
+<!-- ============ OFERTA ============ -->
+<section id="oferta" class="bg-cream py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="inline-flex items-center gap-2 bg-gold-500 text-cacao-900 text-xs sm:text-sm font-extrabold uppercase tracking-widest px-5 py-2 rounded-full shadow-soft">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+        Matrículas abertas
+      </span>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-cacao-900">Comece a vender suas fatias agora</h2>
+      <p class="mt-4 text-cacao-700">Matrículas abertas em um preço imperdível para você começar a vender suas fatias e faturar alto — com acesso vitalício a todo o método.</p>
+    </div>
+
+    <div class="mt-16 reveal relative">
+      <div class="absolute -top-16 -left-16 w-72 h-72 bg-rose/50 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-20 -right-10 w-80 h-80 bg-gold-300/40 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/3 right-1/3 w-56 h-56 bg-lilac/30 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative grid lg:grid-cols-2 rounded-[2rem] overflow-visible bg-white shadow-soft">
+        <!-- PAINEL CLARO -->
+        <div class="relative bg-creamalt rounded-[2rem] lg:rounded-r-none overflow-hidden p-8 sm:p-10 lg:py-12">
+          <h3 class="text-xl sm:text-2xl font-extrabold text-cacao-900">Tudo o que você recebe</h3>
+          <p class="mt-1.5 text-sm text-cacao-700">Acesso imediato, no seu ritmo, pra sempre.</p>
+
+          <ul class="mt-6 space-y-3.5 text-sm sm:text-base text-cacao-800">
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 w-6 h-6 rounded-full bg-cta text-cream flex items-center justify-center mt-0.5">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              Vídeo aulas práticas, rápidas e fácil entendimento
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 w-6 h-6 rounded-full bg-cta text-cream flex items-center justify-center mt-0.5">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              Receitas testadas e estruturadas para venda
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 w-6 h-6 rounded-full bg-cta text-cream flex items-center justify-center mt-0.5">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              E-book completo com todas as receitas organizadas
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 w-6 h-6 rounded-full bg-cta text-cream flex items-center justify-center mt-0.5">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              Combinações estratégicas de sabores que vendem
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 w-6 h-6 rounded-full bg-cta text-cream flex items-center justify-center mt-0.5">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              Dicas de montagem, corte e embalagem perfeita
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 w-6 h-6 rounded-full bg-cta text-cream flex items-center justify-center mt-0.5">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              Acesso vitalício + futuras atualizações inclusas
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 w-6 h-6 rounded-full bg-cta text-cream flex items-center justify-center mt-0.5">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              Certificado de conclusão
+            </li>
+          </ul>
+
+          <div class="mt-6 flex gap-3 rounded-2xl border-2 border-dashed border-gold-300 bg-butter/20 p-4">
+            <span class="shrink-0 w-9 h-9 rounded-full bg-rose/60 flex items-center justify-center text-cta">
+              <svg class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7ZM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7Z"/></svg>
+            </span>
+            <p class="text-sm text-cacao-800 leading-relaxed">
+              <strong class="text-cacao-900">Bônus:</strong> planilha de precificação + guia de embalagens liberados junto com o curso.
+            </p>
+          </div>
+
+          <p class="mt-8 text-xs font-bold uppercase tracking-widest text-gold-500">Algumas fatias que você vai aprender</p>
+          <div class="mt-3 grid grid-cols-4 gap-2.5">
+            <img src="./assets/cake_9.jpg" alt="Bolo de morango decorado com chantilly" class="w-full aspect-square object-cover rounded-xl shadow-sm">
+            <img src="./assets/cake_3.jpg" alt="Bolo lilás decorado com mirtilos e flores" class="w-full aspect-square object-cover rounded-xl shadow-sm">
+            <img src="./assets/cake_4.jpg" alt="Fatia de bolo de chocolate com drip e camadas úmidas" class="w-full aspect-square object-cover rounded-xl shadow-sm">
+            <img src="./assets/cake_7.jpg" alt="Red velvet decorado com morangos e mirtilos frescos" class="w-full aspect-square object-cover rounded-xl shadow-sm">
+          </div>
+
+          <img src="./assets/oferta_fatia.jpg" alt="Fatia de bolo com camadas de caramelo, servida em prato de cerâmica" class="hidden lg:block absolute -top-6 right-8 w-28 h-36 object-cover rounded-2xl rotate-6 shadow-2xl ring-4 ring-creamalt z-10">
+        </div>
+
+        <!-- PAINEL ESCURO -->
+        <div class="relative bg-cacao-900 rounded-[2rem] lg:rounded-l-none overflow-hidden p-8 sm:p-10 lg:py-12 text-cream h-full flex flex-col justify-center items-center text-center">
+          <svg class="absolute top-6 left-6 w-4 h-4 text-gold-300/70" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.4 2.4 7.2 6 8-3.6.8-5.4 3.6-6 8-.6-4.4-2.4-7.2-6-8 3.6-.8 5.4-3.6 6-8Z"/></svg>
+          <svg class="absolute top-8 right-8 w-3 h-3 text-gold-300/60" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.4 2.4 7.2 6 8-3.6.8-5.4 3.6-6 8-.6-4.4-2.4-7.2-6-8 3.6-.8 5.4-3.6 6-8Z"/></svg>
+
+          <span class="inline-flex items-center gap-1.5 bg-cta text-cream text-[11px] sm:text-xs font-bold uppercase tracking-wide px-3.5 py-1.5 rounded-full">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 3-2 4-2 7a4 4 0 0 0 8 0c0-1-.3-2-1-3 2 1 4 3.5 4 7a7 7 0 1 1-14 0c0-4.5 3-7 5-11Z"/></svg>
+            Oferta especial
+          </span>
+          <p class="mt-4 text-gold-300/70 text-sm">De <span class="line-through">R$497,00</span></p>
+          <p class="mt-2 text-gold-300/80 text-xs uppercase tracking-widest font-semibold">12x de</p>
+          <p class="mt-2 font-extrabold leading-none tracking-tight">
+            <span class="text-4xl sm:text-5xl align-top mr-1 font-bold text-gold-300">R$</span><span class="text-7xl sm:text-8xl text-cream font-black">15</span><span class="text-4xl sm:text-5xl align-top font-bold text-gold-300">,20</span>
+          </p>
+          <p class="mt-4 text-gold-300 font-semibold text-base sm:text-lg">ou R$147,00 à vista</p>
+
+          <div class="mt-6 w-full rounded-2xl bg-white/5 border border-gold-300/20 p-4 text-center">
+            <p class="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-gold-300 flex items-center justify-center gap-1.5">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-8-8"/><path d="M4 5 2 3M22 3l-2 2M12 4V2M9 2h6"/><path d="M12 8v4l3 2"/></svg>
+              O desconto expira em
+            </p>
+            <div class="mt-3 flex items-center justify-center gap-3">
+              <div class="bg-cacao-950/60 rounded-xl px-3.5 py-2 min-w-[58px]">
+                <p id="offerHours" class="text-2xl sm:text-3xl font-extrabold tabular-nums">05</p>
+                <p class="text-[9px] uppercase tracking-wide text-cream/50">Horas</p>
+              </div>
+              <div class="bg-cacao-950/60 rounded-xl px-3.5 py-2 min-w-[58px]">
+                <p id="offerMinutes" class="text-2xl sm:text-3xl font-extrabold tabular-nums">55</p>
+                <p class="text-[9px] uppercase tracking-wide text-cream/50">Min</p>
+              </div>
+              <div class="bg-cacao-950/60 rounded-xl px-3.5 py-2 min-w-[58px]">
+                <p id="offerSeconds" class="text-2xl sm:text-3xl font-extrabold tabular-nums">12</p>
+                <p class="text-[9px] uppercase tracking-wide text-cream/50">Seg</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://pay.hotmart.com/G105617420Y?bid=1784050208296" target="_blank" rel="noopener" class="cta-btn cta-pulse mt-6 w-full flex items-center justify-center gap-2 text-center bg-gold-500 hover:bg-gold-300 text-cacao-900 font-bold text-base sm:text-lg px-6 py-4 sm:py-5 rounded-full">
+            Quero Garantir Minha Vaga
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 12 4l9 16Z"/><path d="M8.5 20 12 12l3.5 8"/></svg>
+          </a>
+
+          <div class="mt-7 pt-6 w-full border-t border-cream/15 grid grid-cols-3 gap-3 text-center">
+            <div>
+              <svg class="mx-auto w-5 h-5 text-gold-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              <p class="mt-1.5 text-[11px] sm:text-xs text-cream/70 leading-tight">Compra<br>100% segura</p>
+            </div>
+            <div>
+              <svg class="mx-auto w-5 h-5 text-gold-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+              <p class="mt-1.5 text-[11px] sm:text-xs text-cream/70 leading-tight">Até 12x<br>no cartão</p>
+            </div>
+            <div>
+              <svg class="mx-auto w-5 h-5 text-gold-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+              <p class="mt-1.5 text-[11px] sm:text-xs text-cream/70 leading-tight">Garantia<br>de 7 dias</p>
+            </div>
+          </div>
+
+          <div class="mt-5 flex flex-wrap justify-center gap-1.5">
+            <span class="text-[10px] font-bold tracking-wide bg-white/10 text-cream/70 px-2.5 py-1 rounded-md">VISA</span>
+            <span class="text-[10px] font-bold tracking-wide bg-white/10 text-cream/70 px-2.5 py-1 rounded-md">MASTER</span>
+            <span class="text-[10px] font-bold tracking-wide bg-white/10 text-cream/70 px-2.5 py-1 rounded-md">ELO</span>
+            <span class="text-[10px] font-bold tracking-wide bg-white/10 text-cream/70 px-2.5 py-1 rounded-md">AMEX</span>
+            <span class="text-[10px] font-bold tracking-wide bg-white/10 text-cream/70 px-2.5 py-1 rounded-md">PIX</span>
+            <span class="text-[10px] font-bold tracking-wide bg-white/10 text-cream/70 px-2.5 py-1 rounded-md">BOLETO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPRA SEGURA / GARANTIA ============ -->
+<section class="bg-creamalt py-20 sm:py-28">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8">
+    <div class="reveal grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-center bg-white rounded-[2rem] border border-cacao-100 shadow-soft p-8 sm:p-12">
+      <div class="mx-auto sm:mx-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-sage/50 flex items-center justify-center text-cacao-800 shrink-0">
+        <svg class="w-10 h-10 sm:w-12 sm:h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+      </div>
+      <div class="text-center sm:text-left">
+        <span class="text-xs font-semibold uppercase tracking-widest text-gold-500">Compra 100% segura</span>
+        <h2 class="mt-2 text-2xl sm:text-3xl font-extrabold text-cacao-900">7 dias de garantia incondicional</h2>
+        <p class="mt-3 text-cacao-700 leading-relaxed">
+          Você pode conhecer o curso por 7 dias completos, sem risco nenhum. Assista às aulas, coloque a mão na massa e veja se o método é para você. Se por qualquer motivo não gostar, é só pedir e devolvemos 100% do seu dinheiro — sem burocracia, sem perguntas, sem preocupação.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section id="depoimentos" class="bg-cream py-20 sm:py-28 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal">
+      <div class="max-w-2xl">
+        <span class="text-xs font-semibold uppercase tracking-widest text-gold-500">Resultados Reais</span>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-cacao-900">Quem já está vendendo e lucrando</h2>
+        <p class="mt-4 text-cacao-700 leading-relaxed">
+          Veja o feedback espontâneo enviado por alunas e alunos que colocaram o método em prática e comprovaram a qualidade e o faturamento das fatias.
+        </p>
+      </div>
+      <!-- Botões do carrossel -->
+      <div class="flex items-center gap-2">
+        <button id="depoPrev" aria-label="Depoimento anterior" class="w-11 h-11 rounded-full border border-cacao-300 text-cacao-900 flex items-center justify-center hover:bg-cacao-100 transition-colors font-bold text-lg">‹</button>
+        <button id="depoNext" aria-label="Próximo depoimento" class="w-11 h-11 rounded-full border border-cacao-300 text-cacao-900 flex items-center justify-center hover:bg-cacao-100 transition-colors font-bold text-lg">›</button>
+      </div>
+    </div>
+
+    <!-- Carrossel de Prints -->
+    <div id="depoCarousel" class="mt-12 flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory cursor-grab active:cursor-grabbing pb-6">
+      
+      <!-- Print 1 -->
+      <div class="snap-start shrink-0 w-[280px] sm:w-[320px] reveal">
+        <div class="bg-white rounded-2xl p-3 border border-cacao-100 shadow-sm hover:shadow-md transition-shadow cursor-zoom-in feedback-card">
+          <img src="./assets/depoimentos/Feedback 1.jpg" alt="Feedback de aluna Fatias Espetaculares" class="w-full h-auto rounded-xl object-contain aspect-[3/4] bg-creamalt/20">
+        </div>
+      </div>
+      
+      <!-- Print 2 -->
+      <div class="snap-start shrink-0 w-[280px] sm:w-[320px] reveal">
+        <div class="bg-white rounded-2xl p-3 border border-cacao-100 shadow-sm hover:shadow-md transition-shadow cursor-zoom-in feedback-card">
+          <img src="./assets/depoimentos/Feedback 2.png" alt="Feedback de aluna Fatias Espetaculares" class="w-full h-auto rounded-xl object-contain aspect-[3/4] bg-creamalt/20">
+        </div>
+      </div>
+
+      <!-- Print 3 -->
+      <div class="snap-start shrink-0 w-[280px] sm:w-[320px] reveal">
+        <div class="bg-white rounded-2xl p-3 border border-cacao-100 shadow-sm hover:shadow-md transition-shadow cursor-zoom-in feedback-card">
+          <img src="./assets/depoimentos/Feedback 3.png" alt="Feedback de aluna Fatias Espetaculares" class="w-full h-auto rounded-xl object-contain aspect-[3/4] bg-creamalt/20">
+        </div>
+      </div>
+
+      <!-- Print 4 -->
+      <div class="snap-start shrink-0 w-[280px] sm:w-[320px] reveal">
+        <div class="bg-white rounded-2xl p-3 border border-cacao-100 shadow-sm hover:shadow-md transition-shadow cursor-zoom-in feedback-card">
+          <img src="./assets/depoimentos/Feedback 4.png" alt="Feedback de aluna Fatias Espetaculares" class="w-full h-auto rounded-xl object-contain aspect-[3/4] bg-creamalt/20">
+        </div>
+      </div>
+
+      <!-- Print 5 -->
+      <div class="snap-start shrink-0 w-[280px] sm:w-[320px] reveal">
+        <div class="bg-white rounded-2xl p-3 border border-cacao-100 shadow-sm hover:shadow-md transition-shadow cursor-zoom-in feedback-card">
+          <img src="./assets/depoimentos/Feedback 5.jpg" alt="Feedback de aluna Fatias Espetaculares" class="w-full h-auto rounded-xl object-contain aspect-[3/4] bg-creamalt/20">
+        </div>
+      </div>
+
+      <!-- Print 6 -->
+      <div class="snap-start shrink-0 w-[280px] sm:w-[320px] reveal">
+        <div class="bg-white rounded-2xl p-3 border border-cacao-100 shadow-sm hover:shadow-md transition-shadow cursor-zoom-in feedback-card">
+          <img src="./assets/depoimentos/Feedback 6.png" alt="Feedback de aluna Fatias Espetaculares" class="w-full h-auto rounded-xl object-contain aspect-[3/4] bg-creamalt/20">
+        </div>
+      </div>
+
+      <!-- Print 7 -->
+      <div class="snap-start shrink-0 w-[280px] sm:w-[320px] reveal">
+        <div class="bg-white rounded-2xl p-3 border border-cacao-100 shadow-sm hover:shadow-md transition-shadow cursor-zoom-in feedback-card">
+          <img src="./assets/depoimentos/Feedback 7.png" alt="Feedback de aluna Fatias Espetaculares" class="w-full h-auto rounded-xl object-contain aspect-[3/4] bg-creamalt/20">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal do Depoimento (Zoom) -->
+<div id="depoModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 opacity-0 transition-opacity duration-300 ease-out p-4">
+  <div class="relative max-w-md w-full mx-auto">
+    <button id="closeDepoModal" class="absolute -top-12 right-0 text-white hover:text-gold-300 text-3xl font-bold transition-colors" aria-label="Fechar modal">&times;</button>
+    <img id="modalDepoImg" src="" alt="Feedback Ampliado" class="w-full h-auto rounded-xl shadow-2xl border-4 border-white/10 max-h-[85vh] object-contain">
+  </div>
+</div>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="bg-creamalt py-20 sm:py-28">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8">
+    <div class="text-center reveal">
+      <span class="text-xs font-semibold uppercase tracking-widest text-gold-500">Dúvidas frequentes</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-cacao-900">Perguntas frequentes</h2>
+    </div>
+
+    <div class="mt-12 space-y-3" id="accordion">
+      <div class="reveal bg-white rounded-2xl border border-cacao-100 overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 font-semibold text-cacao-900">
+          Preciso ter experiência em confeitaria?
+          <span class="accordion-icon text-cta text-xl">+</span>
+        </button>
+        <div class="accordion-panel px-6"><p class="pb-5 text-sm text-cacao-700 leading-relaxed">Não. O método foi desenhado passo a passo, do zero, para quem nunca vendeu um bolo — e também traz técnicas avançadas para quem já confeita.</p></div>
+      </div>
+      <div class="reveal bg-white rounded-2xl border border-cacao-100 overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 font-semibold text-cacao-900">
+          Por quanto tempo tenho acesso?
+          <span class="accordion-icon text-cta text-xl">+</span>
+        </button>
+        <div class="accordion-panel px-6"><p class="pb-5 text-sm text-cacao-700 leading-relaxed">O acesso é vitalício. Você assiste no seu ritmo, quantas vezes quiser, direto do celular ou computador.</p></div>
+      </div>
+      <div class="reveal bg-white rounded-2xl border border-cacao-100 overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 font-semibold text-cacao-900">
+          As aulas são ao vivo ou gravadas?
+          <span class="accordion-icon text-cta text-xl">+</span>
+        </button>
+        <div class="accordion-panel px-6"><p class="pb-5 text-sm text-cacao-700 leading-relaxed">São aulas em vídeo, gravadas, com passo a passo detalhado para você aprender no seu tempo.</p></div>
+      </div>
+      <div class="reveal bg-white rounded-2xl border border-cacao-100 overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 font-semibold text-cacao-900">
+          E se eu não gostar do curso?
+          <span class="accordion-icon text-cta text-xl">+</span>
+        </button>
+        <div class="accordion-panel px-6"><p class="pb-5 text-sm text-cacao-700 leading-relaxed">Você tem garantia incondicional de 7 dias. Se não for para você, devolvemos seu investimento.</p></div>
+      </div>
+      <div class="reveal bg-white rounded-2xl border border-cacao-100 overflow-hidden">
+        <button class="acc-trigger w-full flex items-center justify-between text-left px-6 py-5 font-semibold text-cacao-900">
+          Preciso de equipamentos profissionais?
+          <span class="accordion-icon text-cta text-xl">+</span>
+        </button>
+        <div class="accordion-panel px-6"><p class="pb-5 text-sm text-cacao-700 leading-relaxed">Não. O curso foi pensado para começar com o que você já tem em casa, e evoluir aos poucos.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="bg-cacao-900 py-20 sm:py-24 relative overflow-hidden">
+  <div class="absolute -top-20 -right-20 w-72 h-72 bg-gold-500/20 rounded-full blur-3xl"></div>
+  <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center reveal">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-cream leading-tight">Sua primeira fatia vendida pode estar a um clique de distância</h2>
+    <p class="mt-4 text-cream/70">Garanta sua vaga agora e comece a colocar o método em prática ainda esta semana.</p>
+    <a href="#oferta" class="cta-btn cta-pulse mt-8 inline-flex bg-gold-500 hover:bg-gold-300 text-cacao-900 font-bold text-base px-9 py-4 rounded-full">
+      Quero minha vaga agora →
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-creamalt text-cacao-700 border-t border-cacao-100 py-12">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="flex items-center">
+      <img src="./assets/logo-sem-fundo.png" alt="Fatias Espetaculares - por O Menino do Bolo" class="h-12 w-auto">
+    </div>
+    <div class="flex gap-6 text-sm font-medium">
+      <a href="https://www.instagram.com/o_meninodobolo/" target="_blank" rel="noopener" class="hover:text-cta transition-colors">Instagram</a>
+      <a href="#faq" class="hover:text-cta transition-colors">Dúvidas</a>
+      <a href="#" class="hover:text-cta transition-colors">Termos de uso</a>
+      <a href="#" class="hover:text-cta transition-colors">Privacidade</a>
+    </div>
+  </div>
+  <p class="text-center text-xs text-cacao-500 mt-8">© 2026 Fatias Espetaculares — Lúcio Silva. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Video Modal Overlay -->
+<div id="videoModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4 transition-all duration-300 opacity-0">
+  <div class="relative w-full max-w-sm bg-cacao-950 rounded-2xl overflow-hidden shadow-2xl border border-cream/10 flex flex-col max-h-[85vh]">
+    <!-- Close Button -->
+    <button id="closeVideoModal" aria-label="Fechar vídeo" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/60 text-cream flex items-center justify-center hover:bg-black/80 transition-colors text-xl font-bold">✕</button>
+    
+    <!-- Video Player -->
+    <div class="relative aspect-[9/16] w-full flex-grow bg-black flex items-center justify-center">
+      <video id="modalVideo" class="w-full h-full object-contain" controls playsinline>
+        <source src="" type="video/mp4">
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Header shadow on scroll
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('shadow-md', window.scrollY > 12);
+  });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('hidden') === false;
+    mobileMenu.classList.toggle('flex', isOpen);
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.remove('flex');
+  }));
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Countdown timer (2h from page load)
+  const countdownEl = document.getElementById('countdown');
+  let remaining = 2 * 60 * 60; // seconds
+  function formatTime(s) {
+    const h = String(Math.floor(s / 3600)).padStart(2, '0');
+    const m = String(Math.floor((s % 3600) / 60)).padStart(2, '0');
+    const sec = String(s % 60).padStart(2, '0');
+    return `${h}:${m}:${sec}`;
+  }
+  countdownEl.textContent = formatTime(remaining);
+  setInterval(() => {
+    remaining = remaining > 0 ? remaining - 1 : 0;
+    countdownEl.textContent = formatTime(remaining);
+  }, 1000);
+
+  // Contador regressivo do card de oferta (5h55min12s a partir do carregamento)
+  const offerH = document.getElementById('offerHours');
+  const offerM = document.getElementById('offerMinutes');
+  const offerS = document.getElementById('offerSeconds');
+  if (offerH && offerM && offerS) {
+    let offerRemaining = 5 * 3600 + 55 * 60 + 12;
+    function renderOfferCountdown() {
+      const h = Math.floor(offerRemaining / 3600);
+      const m = Math.floor((offerRemaining % 3600) / 60);
+      const s = offerRemaining % 60;
+      offerH.textContent = String(h).padStart(2, '0');
+      offerM.textContent = String(m).padStart(2, '0');
+      offerS.textContent = String(s).padStart(2, '0');
+    }
+    renderOfferCountdown();
+    setInterval(() => {
+      offerRemaining = offerRemaining > 0 ? offerRemaining - 1 : 0;
+      renderOfferCountdown();
+    }, 1000);
+  }
+
+  // FAQ accordion
+  document.querySelectorAll('.acc-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = btn.nextElementSibling;
+      const icon = btn.querySelector('.accordion-icon');
+      const isOpen = panel.style.maxHeight && panel.style.maxHeight !== '0px';
+      document.querySelectorAll('.accordion-panel').forEach(p => p.style.maxHeight = '0px');
+      document.querySelectorAll('.accordion-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+      if (!isOpen) {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+        icon.style.transform = 'rotate(45deg)';
+      }
+    });
+  });
+
+  // Video carousel: drag to scroll + arrow buttons
+  const carousel = document.getElementById('carousel');
+  const prevBtn = document.getElementById('carPrev');
+  const nextBtn = document.getElementById('carNext');
+  let isDown = false, startX, scrollLeft;
+
+  carousel.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+  });
+  ['mouseleave','mouseup'].forEach(evt => carousel.addEventListener(evt, () => isDown = false));
+  carousel.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    carousel.scrollLeft = scrollLeft - (x - startX) * 1.4;
+  });
+
+  const scrollAmount = 280;
+  prevBtn?.addEventListener('click', () => carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
+  nextBtn?.addEventListener('click', () => carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
+
+  // Video Modal Logic
+  const videoModal = document.getElementById('videoModal');
+  const modalVideo = document.getElementById('modalVideo');
+  const closeModalBtn = document.getElementById('closeVideoModal');
+  const videoCards = document.querySelectorAll('.video-card');
+
+  videoCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const sourceEl = card.querySelector('video source');
+      if (sourceEl) {
+        const videoSrc = sourceEl.getAttribute('src');
+        modalVideo.src = videoSrc;
+        
+        // Show modal with animation
+        videoModal.classList.remove('hidden');
+        videoModal.classList.add('flex');
+        setTimeout(() => {
+          videoModal.classList.remove('opacity-0');
+          videoModal.classList.add('opacity-100');
+        }, 10);
+        
+        // Play video
+        modalVideo.play().catch(err => console.log('Autoplay blocked:', err));
+      }
+    });
+  });
+
+  function closeModal() {
+    videoModal.classList.remove('opacity-100');
+    videoModal.classList.add('opacity-0');
+    modalVideo.pause();
+    modalVideo.src = '';
+    setTimeout(() => {
+      videoModal.classList.remove('flex');
+      videoModal.classList.add('hidden');
+    }, 300);
+  }
+
+  closeModalBtn?.addEventListener('click', closeModal);
+  videoModal?.addEventListener('click', (e) => {
+    if (e.target === videoModal) {
+      closeModal();
+    }
+  });
+
+  // Certificate Modal Logic
+  const certModal = document.getElementById('certModal');
+  const openCertBtn = document.getElementById('openCertModal');
+  const closeCertModalBtn = document.getElementById('closeCertModal');
+
+  openCertBtn?.addEventListener('click', () => {
+    certModal.classList.remove('hidden');
+    certModal.classList.add('flex');
+    setTimeout(() => {
+      certModal.classList.remove('opacity-0');
+      certModal.classList.add('opacity-100');
+    }, 10);
+  });
+
+  function closeCert() {
+    certModal.classList.remove('opacity-100');
+    certModal.classList.add('opacity-0');
+    setTimeout(() => {
+      certModal.classList.remove('flex');
+      certModal.classList.add('hidden');
+    }, 300);
+  }
+
+  closeCertModalBtn?.addEventListener('click', closeCert);
+  certModal?.addEventListener('click', (e) => {
+    if (e.target === certModal) {
+      closeCert();
+    }
+  });
+
+  // Depoimentos carousel: drag to scroll + arrow buttons
+  const depoCarousel = document.getElementById('depoCarousel');
+  const depoPrevBtn = document.getElementById('depoPrev');
+  const depoNextBtn = document.getElementById('depoNext');
+  let depoIsDown = false, depoStartX, depoScrollLeft;
+
+  depoCarousel?.addEventListener('mousedown', (e) => {
+    depoIsDown = true;
+    depoStartX = e.pageX - depoCarousel.offsetLeft;
+    depoScrollLeft = depoCarousel.scrollLeft;
+  });
+  ['mouseleave', 'mouseup'].forEach(evt => depoCarousel?.addEventListener(evt, () => depoIsDown = false));
+  depoCarousel?.addEventListener('mousemove', (e) => {
+    if (!depoIsDown) return;
+    e.preventDefault();
+    const x = e.pageX - depoCarousel.offsetLeft;
+    depoCarousel.scrollLeft = depoScrollLeft - (x - depoStartX) * 1.4;
+  });
+
+  const depoScrollAmount = 320;
+  depoPrevBtn?.addEventListener('click', () => depoCarousel.scrollBy({ left: -depoScrollAmount, behavior: 'smooth' }));
+  depoNextBtn?.addEventListener('click', () => depoCarousel.scrollBy({ left: depoScrollAmount, behavior: 'smooth' }));
+
+  // Testimonials Lightbox Modal
+  const depoModal = document.getElementById('depoModal');
+  const modalDepoImg = document.getElementById('modalDepoImg');
+  const closeDepoModalBtn = document.getElementById('closeDepoModal');
+  const feedbackCards = document.querySelectorAll('.feedback-card');
+
+  feedbackCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('img');
+      if (img && depoModal && modalDepoImg) {
+        modalDepoImg.src = img.src;
+        depoModal.classList.remove('hidden');
+        depoModal.classList.add('flex');
+        setTimeout(() => {
+          depoModal.classList.remove('opacity-0');
+          depoModal.classList.add('opacity-100');
+        }, 10);
+      }
+    });
+  });
+
+  function closeDepoModal() {
+    if (depoModal) {
+      depoModal.classList.remove('opacity-100');
+      depoModal.classList.add('opacity-0');
+      setTimeout(() => {
+        depoModal.classList.remove('flex');
+        depoModal.classList.add('hidden');
+      }, 300);
+    }
+  }
+
+  closeDepoModalBtn?.addEventListener('click', closeDepoModal);
+  depoModal?.addEventListener('click', (e) => {
+    if (e.target === depoModal) {
+      closeDepoModal();
+    }
+  });
+</script>
+</body>
+</html>
