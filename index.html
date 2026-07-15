@@ -136,17 +136,28 @@
 <body class="bg-cream text-cacao-900 antialiased">
 
 <!-- ============ BARRA DE URGÊNCIA ============ -->
-<div class="bg-cacao-900 text-cream text-center text-xs sm:text-sm py-2 px-4 relative z-[60]">
-  <span class="font-medium">Condição de lançamento: bônus exclusivos saem do ar em</span>
-  <span id="countdown" class="font-bold tabular-nums ml-1">02:00:00</span>
+<div class="sticky top-0 z-[60] bg-cacao-900 text-cream border-b border-cacao-800">
+  <!-- Mobile: duas linhas compactas -->
+  <div class="flex flex-col items-center justify-center py-1.5 px-4 sm:hidden">
+    <span class="text-[11px] font-medium text-cream/80 leading-tight">🔥 Bônus exclusivos saem do ar em</span>
+    <span id="countdown" class="text-base font-bold tabular-nums tracking-wide text-cream">02:00:00</span>
+  </div>
+  <!-- Desktop: linha única -->
+  <div class="hidden sm:flex items-center justify-center py-2 px-4 text-sm">
+    <span class="font-medium">Condição de lançamento: bônus exclusivos saem do ar em</span>
+    <span id="countdown-desktop" class="font-bold tabular-nums ml-2">02:00:00</span>
+  </div>
 </div>
 
 <!-- ============ HEADER ============ -->
-<header id="header" class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-cacao-100 transition-shadow">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-16 sm:h-20">
-    <a href="#topo" class="flex items-center">
-      <img src="./assets/logo-sem-fundo.png" alt="Fatias Espetaculares - por O Menino do Bolo" class="h-11 sm:h-14 w-auto">
+<header id="header" class="sticky top-[52px] sm:top-8 z-50 bg-white/95 backdrop-blur-md border-b border-cacao-100 transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between h-14 sm:h-20">
+    <!-- Logo -->
+    <a href="#topo" class="flex items-center shrink-0">
+      <img src="./assets/logo-sem-fundo.png" alt="Fatias Espetaculares - por O Menino do Bolo" class="h-9 sm:h-14 w-auto">
     </a>
+
+    <!-- Nav desktop -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-cacao-700">
       <a href="#sobre" class="hover:text-cta transition-colors">Sobre</a>
       <a href="#conteudo" class="hover:text-cta transition-colors">Conteúdo</a>
@@ -154,20 +165,33 @@
       <a href="#depoimentos" class="hover:text-cta transition-colors">Depoimentos</a>
       <a href="#faq" class="hover:text-cta transition-colors">Dúvidas</a>
     </nav>
+
+    <!-- CTA desktop -->
     <a href="#oferta" class="cta-btn hidden md:inline-flex items-center bg-cta hover:bg-cta-dark text-cream font-semibold text-sm px-5 py-2.5 rounded-full shadow-soft">
       Quero minha vaga
     </a>
-    <button id="menuBtn" aria-label="Abrir menu" aria-expanded="false" class="md:hidden text-cacao-900">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
-    </button>
+
+    <!-- Mobile: CTA pill + hambúrguer -->
+    <div class="flex items-center gap-2 md:hidden">
+      <a href="#oferta" class="cta-btn inline-flex items-center bg-cta hover:bg-cta-dark text-cream font-semibold text-[11px] px-3 py-1.5 rounded-full shadow-soft leading-tight">
+        Quero minha vaga
+      </a>
+      <button id="menuBtn" aria-label="Abrir menu" aria-expanded="false" class="text-cacao-900 p-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+    </div>
   </div>
-  <div id="mobileMenu" class="md:hidden hidden flex-col gap-1 px-5 pb-5 bg-white border-t border-cacao-100">
-    <a href="#sobre" class="py-2.5 text-cacao-800 font-medium">Sobre</a>
-    <a href="#conteudo" class="py-2.5 text-cacao-800 font-medium">Conteúdo</a>
-    <a href="#videos" class="py-2.5 text-cacao-800 font-medium">Bastidores</a>
-    <a href="#depoimentos" class="py-2.5 text-cacao-800 font-medium">Depoimentos</a>
-    <a href="#faq" class="py-2.5 text-cacao-800 font-medium">Dúvidas</a>
-    <a href="#oferta" class="mt-2 text-center bg-cta text-cream font-semibold px-5 py-3 rounded-full">Quero minha vaga</a>
+
+  <!-- Mobile menu dropdown -->
+  <div id="mobileMenu" class="md:hidden hidden flex-col bg-white border-t border-cacao-100 shadow-lg">
+    <div class="flex flex-col px-5 pt-2 pb-5 gap-0">
+      <a href="#sobre" class="py-3 text-cacao-800 font-medium text-sm border-b border-cacao-100/60 hover:text-cta transition-colors">Sobre</a>
+      <a href="#conteudo" class="py-3 text-cacao-800 font-medium text-sm border-b border-cacao-100/60 hover:text-cta transition-colors">Conteúdo</a>
+      <a href="#videos" class="py-3 text-cacao-800 font-medium text-sm border-b border-cacao-100/60 hover:text-cta transition-colors">Bastidores</a>
+      <a href="#depoimentos" class="py-3 text-cacao-800 font-medium text-sm border-b border-cacao-100/60 hover:text-cta transition-colors">Depoimentos</a>
+      <a href="#faq" class="py-3 text-cacao-800 font-medium text-sm hover:text-cta transition-colors">Dúvidas</a>
+      <a href="#oferta" class="mt-4 text-center bg-cta hover:bg-cta-dark text-cream font-semibold text-sm px-5 py-3.5 rounded-full shadow-soft transition-colors">🔥 Quero minha vaga agora</a>
+    </div>
   </div>
 </header>
 
@@ -219,11 +243,11 @@
   <div class="no-scrollbar overflow-hidden">
     <div class="marquee-track flex gap-14 whitespace-nowrap w-max text-cream/90 text-sm sm:text-base font-medium">
       <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3.2 6 3.2s6-1.7 6-3.2v-5"/></svg>Formado na Le Cordon Bleu São Paulo</span>
-      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M8 21h8M12 19v2"/></svg>Já apareceu no Mais Você, com Ana Maria Braga</span>
+      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M8 21h8M12 19v2"/></svg>Mais Você, com Ana Maria Braga</span>
       <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>+1,2 milhão de seguidores no Instagram</span>
       <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 12 4l9 16Z"/><path d="M3 20h18"/><path d="M9 20l3-8 3 8"/><circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/></svg>Criador do perfil @o_meninodobolo</span>
       <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3.2 6 3.2s6-1.7 6-3.2v-5"/></svg>Formado na Le Cordon Bleu São Paulo</span>
-      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M8 21h8M12 19v2"/></svg>Já apareceu no Mais Você, com Ana Maria Braga</span>
+      <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M8 21h8M12 19v2"/></svg>Mais Você, com Ana Maria Braga</span>
       <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>+1,2 milhão de seguidores no Instagram</span>
       <span class="inline-flex items-center gap-2"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 12 4l9 16Z"/><path d="M3 20h18"/><path d="M9 20l3-8 3 8"/><circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/></svg>Criador do perfil @o_meninodobolo</span>
     </div>
@@ -325,10 +349,10 @@
       </p>
 
       <p class="mt-6 text-cacao-700 leading-relaxed">
-        Enquanto muita gente ainda tenta viver da confeitaria vendendo bolos inteiros, Lúcio encontrou um caminho muito mais lucrativo: <strong class="text-cacao-900">transformar bolos em fatias irresistíveis que vendem todos os dias.</strong>
+        Enquanto muita gente ainda tenta viver da confeitaria vendendo bolos inteiros, eu encontrei um caminho muito mais lucrativo: <strong class="text-cacao-900">transformar bolos em fatias irresistíveis que vendem todos os dias.</strong>
       </p>
       <p class="mt-4 text-cacao-700 leading-relaxed">
-        Depois de ensinar <strong class="text-cacao-900">mais de um milhão de pessoas</strong> nas redes sociais e se aperfeiçoar na <strong class="text-cacao-900">Le Cordon Bleu São Paulo</strong>, ele reuniu tudo o que aprendeu em anos de prática em um <strong class="text-cacao-900">treinamento completo, prático e direto ao ponto.</strong>
+        Depois de ensinar <strong class="text-cacao-900">mais de um milhão de pessoas</strong> nas redes sociais e me aperfeiçoar na <strong class="text-cacao-900">Le Cordon Bleu São Paulo</strong>, eu reuniu tudo o que aprendi em anos de prática em um <strong class="text-cacao-900">treinamento completo, prático e direto ao ponto.</strong>
       </p>
 
       <div class="mt-8">
@@ -496,7 +520,7 @@
       <div class="text-center max-w-2xl mx-auto reveal">
         <span class="text-xs font-semibold uppercase tracking-widest text-gold-500">Cardápio completo</span>
         <h3 class="mt-3 text-2xl sm:text-3xl font-extrabold text-cacao-900">Tudo o que você vai ter em mãos</h3>
-        <p class="mt-3 text-cacao-700 leading-relaxed">O passo a passo de cada receita, já testada e pronta pra vender — sem precisar inventar nada sozinho.</p>
+        <p class="mt-3 text-cacao-700 leading-relaxed">O passo a passo de cada receita, já testada e pronta pra vender sem precisar inventar nada sozinho.</p>
       </div>
 
       <div class="mt-12 grid sm:grid-cols-2 gap-6">
@@ -651,14 +675,14 @@
       <div class="snap-start shrink-0 w-[220px] sm:w-[260px] reveal">
         <div class="relative rounded-2xl overflow-hidden aspect-[9/16] group cursor-pointer video-card">
           <video autoplay loop muted playsinline class="absolute inset-0 object-cover w-full h-full group-hover:scale-110 transition-transform" preload="metadata">
-            <source src="./assets/reels/o_meninodobolo.mp4" type="video/mp4">
+            <source src="./assets/reels/desafioanamaria.mp4" type="video/mp4">
             Seu navegador não suporta vídeo HTML5.
           </video>
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center text-cta text-xl group-hover:scale-110 transition-transform">▶</div>
           </div>
-          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">O dia em que fui parar no Mais Você, com a Ana Maria Braga</p>
+          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">Mais Você com Ana Maria Braga</p>
         </div>
       </div>
       <div class="snap-start shrink-0 w-[220px] sm:w-[260px] reveal">
@@ -671,7 +695,7 @@
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center text-cta text-xl group-hover:scale-110 transition-transform">▶</div>
           </div>
-          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">Bastidores da formação na Le Cordon Bleu São Paulo</p>
+          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">Bolo pudim</p>
         </div>
       </div>
       <div class="snap-start shrink-0 w-[220px] sm:w-[260px] reveal">
@@ -684,7 +708,7 @@
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center text-cta text-xl group-hover:scale-110 transition-transform">▶</div>
           </div>
-          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">Como nasceu o método Fatias Espetaculares</p>
+          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">Bolo de leite ninho com uvas verdes</p>
         </div>
       </div>
       <div class="snap-start shrink-0 w-[220px] sm:w-[260px] reveal">
@@ -697,7 +721,7 @@
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center text-cta text-xl group-hover:scale-110 transition-transform">▶</div>
           </div>
-          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">De 0 a 1,2 milhão de seguidores fazendo bolo</p>
+          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">Bolo red velvet</p>
         </div>
       </div>
       <div class="snap-start shrink-0 w-[220px] sm:w-[260px] reveal">
@@ -710,7 +734,7 @@
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center text-cta text-xl group-hover:scale-110 transition-transform">▶</div>
           </div>
-          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">Montagem completa de uma fatia, do zero</p>
+          <p class="absolute bottom-3 left-3 right-3 text-cream text-sm font-semibold leading-snug">Bolo de maracujá</p>
         </div>
       </div>
     </div>
@@ -1013,7 +1037,7 @@
             </div>
           </div>
 
-          <a href="https://pay.hotmart.com/G105617420Y?bid=1784050208296" target="_blank" rel="noopener" class="cta-btn cta-pulse mt-6 w-full flex items-center justify-center gap-2 text-center bg-gold-500 hover:bg-gold-300 text-cacao-900 font-bold text-base sm:text-lg px-6 py-4 sm:py-5 rounded-full">
+          <a href="https://pay.hotmart.com/G105617420Y?bid=1784050208296" target="_blank" rel="noopener" class="cta-btn cta-pulse mt-6 w-full flex items-center justify-center gap-2 text-center bg-yellow-400 hover:bg-yellow-500 text-cacao-900 font-bold text-base sm:text-lg px-6 py-4 sm:py-5 rounded-full">
             Quero Garantir Minha Vaga
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20 12 4l9 16Z"/><path d="M8.5 20 12 12l3.5 8"/></svg>
           </a>
@@ -1201,7 +1225,7 @@
   <div class="relative max-w-3xl mx-auto px-5 sm:px-8 text-center reveal">
     <h2 class="text-3xl sm:text-4xl font-extrabold text-cream leading-tight">Sua primeira fatia vendida pode estar a um clique de distância</h2>
     <p class="mt-4 text-cream/70">Garanta sua vaga agora e comece a colocar o método em prática ainda esta semana.</p>
-    <a href="#oferta" class="cta-btn cta-pulse mt-8 inline-flex bg-gold-500 hover:bg-gold-300 text-cacao-900 font-bold text-base px-9 py-4 rounded-full">
+    <a href="#oferta" class="cta-btn cta-pulse mt-8 inline-flex bg-yellow-400 hover:bg-yellow-500 text-cacao-900 font-bold text-base px-9 py-4 rounded-full">
       Quero minha vaga agora →
     </a>
   </div>
@@ -1273,6 +1297,7 @@
 
   // Countdown timer (2h from page load)
   const countdownEl = document.getElementById('countdown');
+  const countdownDesktopEl = document.getElementById('countdown-desktop');
   let remaining = 2 * 60 * 60; // seconds
   function formatTime(s) {
     const h = String(Math.floor(s / 3600)).padStart(2, '0');
@@ -1280,10 +1305,15 @@
     const sec = String(s % 60).padStart(2, '0');
     return `${h}:${m}:${sec}`;
   }
-  countdownEl.textContent = formatTime(remaining);
+  function updateCountdowns(val) {
+    const formatted = formatTime(val);
+    if (countdownEl) countdownEl.textContent = formatted;
+    if (countdownDesktopEl) countdownDesktopEl.textContent = formatted;
+  }
+  updateCountdowns(remaining);
   setInterval(() => {
     remaining = remaining > 0 ? remaining - 1 : 0;
-    countdownEl.textContent = formatTime(remaining);
+    updateCountdowns(remaining);
   }, 1000);
 
   // Contador regressivo do card de oferta (5h55min12s a partir do carregamento)
