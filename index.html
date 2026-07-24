@@ -756,14 +756,52 @@
       <p class="mt-4 text-cacao-700 leading-relaxed">Produções que encantam, conquistam clientes e geram venda. Tudo o que você vai aprender no curso Fatias Espetaculares.</p>
     </div>
 
-    <div class="mt-12 reveal grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-      <img src="./assets/real/real_1.jpg" alt="Fatias de bolo de chocolate com morango e uva verde, embaladas para entrega" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
-      <img src="./assets/real/real_7.jpg" alt="Fatias de bolo rosa com morango e geleia, embaladas para entrega" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
-      <img src="./assets/real/real_3.jpg" alt="Variedade de bolos inteiros decorados: red velvet, coco, pistache e chocolate" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
-      <img src="./assets/real/real_2.jpg" alt="Bolo de limão com camadas fofinhas, cortado ao meio" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
-      <img src="./assets/real/real_4.jpg" alt="Fatia de bolo de chocolate com doce de leite, embalada para viagem" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
-      <img src="./assets/real/real_5.jpg" alt="Fatia de bolo de chocolate com maracujá e brigadeiro, embalada para viagem" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
-      <img src="./assets/real/real_6.jpg" alt="Fatia de bolo branco com uva verde, embalada para viagem" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm" loading="lazy">
+    <!-- Container da Galeria com 12 fotos visíveis por padrão + Fade Overlay -->
+    <div class="relative mt-12 reveal">
+      <div id="galleryGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-h-[780px] sm:max-h-[920px] overflow-hidden transition-all duration-700 ease-in-out">
+        <!-- 12 fotos iniciais -->
+        <img src="./assets/bolos/morango-branco-cobertura.jpg" alt="Bolo de Morango com Cobertura Branca" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/bolos/fatia-chocolatuda.jpg" alt="Fatia Chocolatuda Espetacular" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/bolos/fatia-morango.jpg" alt="Fatia de Morango Especial" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/bolos/varias-fatias-chocolate.jpg" alt="Produção em Lote de Fatias" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/real/real_1.jpg" alt="Fatias de bolo embaladas para entrega" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/real/real_7.jpg" alt="Fatias de bolo rosa com morango e geleia" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/real/real_3.jpg" alt="Variedade de bolos inteiros decorados" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/real/real_2.jpg" alt="Bolo de limão com camadas fofinhas" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/real/real_4.jpg" alt="Fatia de bolo de chocolate com doce de leite" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/real/real_5.jpg" alt="Fatia de bolo de chocolate com maracujá" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/real/real_6.jpg" alt="Fatia de bolo branco com uva verde" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/bolos/bolo-cobertura-maracuja.jpg" alt="Bolo de Maracujá com Cobertura" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+
+        <!-- Fotos adicionais que aparecem na expansão -->
+        <img src="./assets/bolos/pistache-morango.jpg" alt="Bolo de Pistache com Morango" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/bolos/fatia-negresco.jpg" alt="Fatia Crocante Negresco" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/bolos/fatia-uva-verde.jpg" alt="Fatia de Uva Verde" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/bolos/bolo-chocolate-coco.jpg" alt="Bolo de Chocolate com Coco" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/bolos/cobertura-branca-bombom.jpg" alt="Cobertura Branca com Bombom" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/bolos/bolo-cobertura-amendoim.jpg" alt="Bolo com Cobertura de Amendoim" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/bolos/fatias-caramelo.jpg" alt="Fatias de Caramelo" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+        <img src="./assets/bolos/fatias-bolo-recheio-branco.jpg" alt="Fatias com Recheio Branco" class="w-full aspect-[3/4] object-cover rounded-2xl shadow-sm hover:scale-105 transition-transform duration-300" loading="lazy">
+      </div>
+
+      <!-- Sombra / Gradiente sutil no final da galeria (Fade Overlay) -->
+      <div id="galleryOverlay" class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-creamalt via-creamalt/80 to-transparent pointer-events-none transition-opacity duration-500"></div>
+    </div>
+
+    <!-- Botão Ver Mais sutil + Call To Action Offer -->
+    <div class="relative z-10 -mt-8 text-center reveal flex flex-col items-center gap-6">
+      <button id="toggleGalleryBtn" onclick="const grid=document.getElementById('galleryGrid'); const overlay=document.getElementById('galleryOverlay'); const isExpanded=grid.classList.contains('max-h-none'); if(!isExpanded){ grid.classList.remove('max-h-[780px]', 'sm:max-h-[920px]'); grid.classList.add('max-h-none'); overlay.classList.add('opacity-0'); this.innerHTML='Ver menos produções ↑'; } else { grid.classList.add('max-h-[780px]', 'sm:max-h-[920px]'); grid.classList.remove('max-h-none'); overlay.classList.remove('opacity-0'); this.innerHTML='Ver todas as produções ↓'; }" class="inline-flex items-center gap-2 border border-cacao-200 hover:border-gold-500 bg-white/90 backdrop-blur-sm text-cacao-900 font-bold text-sm sm:text-base px-7 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all cursor-pointer">
+        Ver todas as produções ↓
+      </button>
+
+      <!-- CTA de Oferta abaixo da galeria -->
+      <div class="mt-6 pt-6 border-t border-cacao-200/60 w-full max-w-xl">
+        <h4 class="text-xl sm:text-2xl font-extrabold text-cacao-900 mb-2">Pronta para produzir fatias assim?</h4>
+        <p class="text-sm text-cacao-700 mb-6">Garanta sua vaga no método Fatias Espetaculares e comece ainda essa semana.</p>
+        <a href="#oferta" class="cta-btn cta-pulse inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-dark text-cream font-bold text-base sm:text-lg px-8 py-4 rounded-full shadow-soft w-full sm:w-auto">
+          Quero aprender esse método agora →
+        </a>
+      </div>
     </div>
   </div>
 </section>
